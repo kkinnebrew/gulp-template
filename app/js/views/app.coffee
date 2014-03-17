@@ -9,10 +9,10 @@ PerformanceView = require './performance'
 AppView = Clementine.View.extend
 
   initialize: (config = {}) ->
-    @super(config)
+    @super config
 
     @toolbarView = new ToolbarView
-      'selected': 'portfolio'
+      'defaultOption': 'portfolio'
 
     @multiView = new MultiView
       'defaultView': 'portfolio'
@@ -25,7 +25,7 @@ AppView = Clementine.View.extend
     'toolbarView': 'goto': -> @onGoto
 
   outlets: ->
-    'toolbar': '.toolbar',
+    'toolbar': '.toolbar'
     'content': '.content'
 
   render: ->

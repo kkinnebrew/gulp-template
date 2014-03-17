@@ -3,18 +3,18 @@ Clementine = require 'clementine'
 ToolbarView = Clementine.View.extend
 
   initialize: (config = {}) ->
-    @super(config)
+    @super config
 
   events: ->
     'logo': 'click': @onHome
-    'navigation-item': 'click': @onNavigate
-    'settings-btn': 'click': @onSettings
+    'navigationItem': 'click': @onNavigate
+    'settingsBtn': 'click': @onSettings
 
   outlets: ->
     'logo': '#logo'
-    'menu-item': '.navigation(.navigation-item)'
-    'settings-btn': '.settings-btn'
-    'user-label': '.user-label'
+    'menuItem': '.navigation(.navigation-item)'
+    'settingsBtn': '.settings-btn'
+    'userLabel': '.user-label'
 
   setUser: (user) ->
     @userLabel.text user.name
