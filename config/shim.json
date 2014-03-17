@@ -6,9 +6,5 @@
   "underscore": {
     "path": "app/bower_components/underscore/underscore.js",
     "exports": "underscore"
-  },
-  "clementine": {
-    "path": "app/bower_components/clementine/clementine.js",
-    "exports": "clementine"
   }
 }
