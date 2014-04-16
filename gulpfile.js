@@ -119,7 +119,7 @@ gulp.task('clean:tmp', function() {
 
 // server
 
-gulp.task('server', ['watch'], function() {
+gulp.task('server', function() {
   var app = express();
   app.use(express.static('dist'));
   app.listen(4000);
