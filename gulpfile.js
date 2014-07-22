@@ -10,8 +10,9 @@ var uglify = require('gulp-uglify');
 
 var fs = require('fs');
 var glob = require('glob');
+var openBrowser = require('open');
 var sequence = require('run-sequence');
-var app = require('./server');
+var app = require('./gulp/server');
 
 var pkg = require('./package.json');
 var paths = require('./config/paths.json');
@@ -143,6 +144,7 @@ gulp.task('server', function() {
 	app.set('port', 4000);
 	app.listen(app.get('port'), function() {
 		console.log('Server listening on port %s ...', app.get('port'));
+		openBrowser('http://localhost:' + app.get('port'));
 	});
 });
 
