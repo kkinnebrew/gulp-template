@@ -7,7 +7,7 @@ A base web application project template using Gulp, Browserify, SASS, and Bower
 
 - Clone the repository into a local directory and `cd` into that directory
 
-- Update your package.json and bower.json files with your application's name, version, and other metadata.
+- Update your `package.json` and `bower.json` files with your application's name, version, and other metadata.
 
 - Run `npm install`
 
