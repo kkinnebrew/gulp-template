@@ -141,7 +141,9 @@ gulp.task('clean:tmp', function() {
 
 gulp.task('server', function() {
 	app.set('port', 4000);
-	app.listen(app.get('port'));
+	app.listen(app.get('port'), function() {
+		console.log('Server listening on port %s ...', app.get('port'));
+	});
 });
 
 // building
