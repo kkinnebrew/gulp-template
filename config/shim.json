@@ -1,10 +1,4 @@
 {
-  "jquery": {
-    "path": "app/bower_components/jquery/dist/jquery.min.js",
-    "exports": "jQuery"
-  },
-  "underscore": {
-    "path": "app/bower_components/underscore/underscore.js",
-    "exports": "_"
-  }
+	"jquery": "app/bower_components/jquery/dist/jquery.js",
+	"underscore": "app/bower_components/underscore/underscore.js"
 }

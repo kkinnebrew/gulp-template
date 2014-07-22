@@ -1,27 +1,39 @@
 {
-  "name": "gulp-template",
-  "description": "This is a template for a gulp application",
-  "version": "0.1.0",
-  "dependencies": {},
+  "name": "gulp-starter",
+  "version": "1.0.0",
+  "description": "A starter template for a Gulp webapp project",
+  "author": "Kevin Kinnebrew <http://www.github.com/kkinnebrew",
+  "bin": {
+    "www": "./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkinnebrew/gulp-starter"
+  },
+  "keywords": [
+    "gulp",
+    "javascript",
+    "template"
+  ],
+  "dependencies": {
+    "express": "~4.6.1",
+    "morgan": "~1.2.0",
+    "cookie-parser": "~1.3.2"
+  },
   "devDependencies": {
-    "gulp": "~3.5.6",
-    "gulp-sass": "~0.7.1",
-    "gulp-autoprefixer": "0.0.6",
-    "gulp-minify-css": "~0.3.0",
-    "gulp-clean": "~0.2.4",
-    "gulp-concat": "~2.1.7",
-    "gulp-uglify": "~0.2.1",
-    "gulp-bump": "~0.1.6",
+    "gulp": "~3.8.6",
     "gulp-browserify": "~0.5.0",
+    "gulp-clean": "~0.3.1",
+    "gulp-concat": "~2.3.3",
+    "gulp-ejs": "~0.3.0",
     "gulp-rename": "~1.2.0",
-    "gulp-compile-handlebars": "~0.1.1",
-    "gulp-ext-replace": "0.0.5",
-    "gulp-watch": "~0.5.2",
+    "gulp-sass": "~0.7.2",
+    "gulp-uglify": "~0.3.1",
     "run-sequence": "~0.3.6",
-    "coffeeify": "~0.6.0",
-    "handlebars": "~1.3.0",
-    "hbsfy": "~1.3.2",
-    "express": "~3.4.8",
-    "bower": "~1.3.1"
-  }
+    "bower": "~1.3.8",
+    "hbsfy": "~2.0.0",
+    "handlebars": "~2.0.0-alpha.4"
+  },
+  "private": true,
+  "license": "MIT"
 }

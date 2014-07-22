@@ -1,8 +1,14 @@
 {
-  "name": "gulp-template",
-  "version": "0.1.0",
-  "devDependencies": {
-    "jquery": "~2.1.0",
-    "underscore": "~1.6.0"
-  }
+	"name": "gulp-starter",
+	"description": "A starter template for a Gulp webapp project",
+	"author": "Kevin Kinnebrew <http://www.github.com/kkinnebrew",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kkinnebrew/gulp-starter"
+	},
+	"dependencies": {
+		"jquery": "~2.1.1",
+		"underscore": "~1.6.0"
+	},
+	"private": true
 }

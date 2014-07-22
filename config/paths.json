@@ -1,0 +1,15 @@
+{
+  "src": {
+    "sass": ["./app/css/*.scss", "!./app/css/_*.scss"],
+    "css": ["./app/css/*.css", "!./app/css/_*.css"],
+		"_css": "./app/css/_*.css",
+		"img": "./app/img/*",
+		"_js": "./app/js/_*.js",
+		"pages": ["./app/pages/*.html", "!./app/pages/_*.html"],
+		"_pages": "./app/pages/_*.html"
+  },
+  "dest": {
+    "js": "scripts.js",
+    "css": "styles.css"
+  }
+}
