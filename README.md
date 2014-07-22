@@ -15,4 +15,4 @@ A base web application project template using Gulp, Browserify, SASS, and Bower
 
 - Run `gulp` to build your solution
 
-- Run `./bin/www` to serve the web application
+- Run `./bin/www` to serve the web application (or `gulp server` on Windows machines)
