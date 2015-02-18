@@ -1,14 +1,10 @@
 var gulp = require('gulp');
 
 var browserify = require('browserify');
-var clean = require('gulp-clean');
 var concat = require('gulp-concat');
-var ejs = require('gulp-ejs');
-var rename = require("gulp-rename");
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var fs = require('fs');
-var glob = require('glob');
 var openBrowser = require('open');
 var sequence = require('run-sequence');
 var bowerResolve = require('bower-resolve');
