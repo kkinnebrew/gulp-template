@@ -11,13 +11,13 @@ var fs = require('fs');
 var glob = require('glob');
 var openBrowser = require('open');
 var sequence = require('run-sequence');
-var debowerify = require('debowerify');
 var bowerResolve = require('bower-resolve');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var sourcemaps = require('gulp-sourcemaps');
 var coffeeify = require('coffeeify');
 var connect = require('gulp-connect');
+var rimraf = require('gulp-rimraf');
 
 var hbsfy = require('hbsfy').configure({
   extensions: ['hbs']
@@ -121,13 +121,13 @@ gulp.task('html', function() {
 // cleaning
 
 gulp.task('clean', function() {
-  return gulp.src(['build', 'tmp'])
-    .pipe(clean());
+  return gulp.src(['build', 'tmp'], { read: false })
+    .pipe(rimraf());
 });
 
 gulp.task('clean:tmp', function() {
   return gulp.src('tmp')
-    .pipe(clean());
+    .pipe(rimraf());
 });
 
 // serving
