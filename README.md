@@ -1,7 +1,7 @@
 gulp-template
 =============
 
-A base web application project template using Gulp, Browserify, SASS, and Bower
+An web application template using Gulp, Browserify, SASS, Bower, and LiveReload.
 
 # Getting Started
 
@@ -11,8 +11,8 @@ A base web application project template using Gulp, Browserify, SASS, and Bower
 
 - Run `npm install`
 
-- Run `bower install`
-
 - Run `gulp` to build your solution
 
 - Run `gulp server` to serve the web application
+
+- Run `gulp watch` to watch for file changes
