@@ -33,7 +33,12 @@
     "vinyl-buffer": "~1.0.0",
     "coffeeify": "~1.0.0",
     "gulp-connect": "~2.2.0",
-    "handlebars": "~3.0.0"
+    "handlebars": "~3.0.0",
+    "gulp-livereload": "~3.7.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "gulp server"
   },
   "private": true,
   "license": "MIT"

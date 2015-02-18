@@ -14,6 +14,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var coffeeify = require('coffeeify');
 var connect = require('gulp-connect');
 var rimraf = require('gulp-rimraf');
+var livereload = require('gulp-livereload');
 
 var hbsfy = require('hbsfy').configure({
   extensions: ['hbs']
@@ -27,7 +28,8 @@ var dependencies = require('./bower.json').dependencies;
 
 gulp.task('images', function() {
   return gulp.src(['./app/images/**/*'])
-    .pipe(gulp.dest('build/assets'));
+    .pipe(gulp.dest('build/assets'))
+    .pipe(livereload());
 });
 
 // styles
@@ -48,7 +50,8 @@ gulp.task('styles:css', function() {
 gulp.task('styles:concat', function() {
   return gulp.src('./tmp/css/**/*.css')
     .pipe(concat('styles.min.css'))
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('build/'))
+    .pipe(livereload());
 });
 
 gulp.task('styles', function(callback) {
@@ -92,14 +95,14 @@ gulp.task('scripts', function() {
     bundler
       .transform(coffeeify)
       .transform(hbsfy)
-      //.transform(debowerify)
       .bundle()
       .pipe(source('app.min.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init({ loadMaps: true }))
       //.pipe(uglify())
       .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest('./build/'));
+      .pipe(gulp.dest('./build/'))
+      .pipe(livereload());
 
   });
 
@@ -109,8 +112,9 @@ gulp.task('scripts', function() {
 
 gulp.task('html', function() {
 
-  gulp.src('app/index.html')
-    .pipe(gulp.dest('build/'));
+  gulp.src('app/*.html')
+    .pipe(gulp.dest('build/'))
+    .pipe(livereload());
 
 });
 
@@ -128,11 +132,10 @@ gulp.task('clean:tmp', function() {
 
 // serving
 
-gulp.task('server', function() {
+gulp.task('server', ['build'], function() {
   connect.server({
     root: 'build',
-    port: 8888,
-    livereload: true
+    port: 8888
   });
   openBrowser('http://localhost:8888');
 });
@@ -141,6 +144,14 @@ gulp.task('server', function() {
 
 gulp.task('build', function(callback) {
   sequence('clean', ['styles', 'images', 'html', 'scripts'], 'clean:tmp', callback);
+});
+
+gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch('app/images/**/*', ['images']);
+  gulp.watch('app/scripts/**/*', ['scripts']);
+  gulp.watch('app/styles/**/*', ['styles']);
+  gulp.watch('app/*.html', ['html']);
 });
 
 // default
