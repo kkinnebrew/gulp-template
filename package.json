@@ -1,11 +1,8 @@
 {
   "name": "gulp-template",
   "version": "1.0.0",
-  "description": "A starter template for a Gulp webapp project",
+  "description": "A starter template for a Gulp web app project",
   "author": "Kevin Kinnebrew <http://www.github.com/kkinnebrew",
-  "bin": {
-    "www": "./bin/www"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kkinnebrew/gulp-template"
@@ -13,9 +10,15 @@
   "keywords": [
     "gulp",
     "javascript",
-    "template"
+    "template",
+    "bootstrap",
+    "browserify",
+    "handlebars",
+    "sass"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "express": "~4.11.2"
+  },
   "devDependencies": {
     "gulp": "~3.8.11",
     "gulp-rimraf": "~0.1.1",
@@ -40,6 +43,8 @@
     "postinstall": "bower install",
     "start": "gulp server"
   },
-  "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x"
+  }
 }
