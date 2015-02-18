@@ -1,7 +1,7 @@
 gulp-template
 =============
 
-A base web application project template using Gulp, Browserify, SASS, and Bower
+An web application template using Gulp, Browserify, SASS, and Bower.
 
 # Getting Started
 
