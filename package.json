@@ -40,7 +40,6 @@
     "gulp-livereload": "~3.7.0"
   },
   "scripts": {
-    "postinstall": "bower install",
     "start": "gulp server"
   },
   "license": "MIT",
