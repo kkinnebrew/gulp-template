@@ -1,6 +1,5 @@
 .DS_Store
 .idea
 app/bower_components
-dist
 node_modules
 build
