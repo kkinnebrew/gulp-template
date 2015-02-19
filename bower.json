@@ -2,6 +2,7 @@
   "name": "gulp-template",
   "description": "A starter template for a Gulp webapp project",
   "author": "Kevin Kinnebrew <http://www.github.com/kkinnebrew",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/kkinnebrew/gulp-template"

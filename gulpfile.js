@@ -15,6 +15,7 @@ var coffeeify = require('coffeeify');
 var connect = require('gulp-connect');
 var rimraf = require('gulp-rimraf');
 var livereload = require('gulp-livereload');
+var stringify = require('stringify');
 
 var hbsfy = require('hbsfy').configure({
   extensions: ['hbs']
@@ -95,6 +96,7 @@ gulp.task('scripts', function() {
     bundler
       .transform(coffeeify)
       .transform(hbsfy)
+      .transform(stringify(['.html']))
       .bundle()
       .pipe(source('app.min.js'))
       .pipe(buffer())
