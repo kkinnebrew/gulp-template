@@ -7,9 +7,11 @@ An web application template using Gulp, Browserify, SASS, Bower, and LiveReload.
 
 - Clone the repository into a local directory and `cd` into that directory
 
-- Update your `package.json` and `bower.json` files with your application's name, version, and other metadata.
+- Update your `package.json` and `bower.json` files with your application's name, version, dependencies, and other metadata.
 
 - Run `npm install`
+
+- Run `bower install`
 
 - Run `gulp` to build your solution
 
